@@ -5,7 +5,7 @@ export async function addToCart(productId: string) {
   const token = await getMyToken();
 
   if (!token) {
-    return { status: "error", message: "You should log in first" };
+    return { status: "error", message: "Please log in first" };
   }
 
   const res = await fetch(`${process.env.APIV2}/cart`, {
@@ -14,15 +14,20 @@ export async function addToCart(productId: string) {
       token: token,
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({
-      productId,
-    }),
+    body: JSON.stringify({ productId }),
   });
 
   const payload = await res.json();
+
+  if (!res.ok) {
+    return {
+      status: "error",
+      message: payload.message || "Please log in first",
+    };
+  }
+
   return payload;
 }
-
 // "use server"
 // import { getMyToken } from "@/utilities/getMyToken";
 
