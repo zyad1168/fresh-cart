@@ -20,33 +20,33 @@ export default function MyAddToCart({
   };
 
   async function addItetTocart(id: string) {
-    try {
-      const res = await addToCart(id);
-      console.log(res);
-      if (res.status == "success") {
-        toast.add({
-          title: res.message,
-          type: "success",
-          timeout: 1000,
-        });
-        setCartCountItems(cartCountItems + 1);
-      } else {
-        toast.add({
-          title: "you can`t add product now to cart",
-          timeout: 1000,
-        });
-      }
-    } catch (error) {
-      if (error instanceof Error) {
-        toast.add({
-          title: error.message,
-          type: "error",
-          timeout: 1000,
-        });
-      }
+  try {
+    const res = await addToCart(id);
+    console.log(res);
+    if (res.status == "success") {
+      toast.add({
+        title: res.message,
+        type: "success",
+        timeout: 1000,
+      });
+      setCartCountItems(cartCountItems + 1);
+    } else {
+      toast.add({
+        title: "you should log in first",
+        type: "error",
+        timeout: 1000,
+      });
+    }
+  } catch (error) {
+    if (error instanceof Error) {
+      toast.add({
+        title: error.message,
+        type: "error",
+        timeout: 1000,
+      });
     }
   }
-
+}
   return (
     <>
       {isProductDertails ? (
