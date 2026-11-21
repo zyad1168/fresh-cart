@@ -104,7 +104,12 @@ export default function MainSlider() {
             Icon,
           }) => (
             <SwiperSlide key={id}>
-              <div className="relative bg-[url('/assets/images/home-slider-1.d79601a8.png')] h-100 bg-no-repeat bg-center bg-cover">
+              <div
+                style={{
+                  backgroundImage: `url('/assets/Images/home-slider-1.d79601a8.png')`,
+                }}
+                className="relative h-[400px] bg-no-repeat bg-center bg-cover"
+              >
                 <div className="absolute bg-green-600/60 inset-0">
                   <div className="absolute top-1/2 -translate-y-1/2 text-white left-14 md:left-20 max-w-xl pr-12 space-y-3">
                     <span className="animate-slide-in inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-white/15 backdrop-blur-sm border border-white/25 text-white">
@@ -120,7 +125,6 @@ export default function MainSlider() {
                       {subtitle}
                     </p>
 
-                    {/* Primary + Secondary Buttons side by side (wraps nicely on small screens) */}
                     <div className="animate-slide-in-btns pt-2 flex flex-wrap items-center gap-3">
                       <Link
                         href={primaryHref}
@@ -143,7 +147,7 @@ export default function MainSlider() {
                 </div>
               </div>
             </SwiperSlide>
-          )
+          ),
         )}
 
         <button
