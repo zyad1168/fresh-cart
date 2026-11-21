@@ -108,7 +108,7 @@ export default function MainSlider() {
                 style={{
                   backgroundImage: `url('/assets/Images/home-slider-1.d79601a8.png')`,
                 }}
-                className="relative h-[400px] bg-no-repeat bg-center bg-cover"
+                className="relative h-100 bg-no-repeat bg-center bg-cover"
               >
                 <div className="absolute bg-green-600/60 inset-0">
                   <div className="absolute top-1/2 -translate-y-1/2 text-white left-14 md:left-20 max-w-xl pr-12 space-y-3">
