@@ -94,7 +94,7 @@ export default function ProductDetails() {
               <div className="h-11 bg-gray-300/80 rounded-xl" />
             </div>
 
-            <div className="grid grid-cols-3 gap-2.5 pt-3 border-t border-gray-100">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 pt-3 border-t border-gray-100">
               <div className="h-12 bg-gray-100 rounded-lg" />
               <div className="h-12 bg-gray-100 rounded-lg" />
               <div className="h-12 bg-gray-100 rounded-lg" />
@@ -303,7 +303,7 @@ export default function ProductDetails() {
               </button>
             </div>
 
-            <div className="grid grid-cols-3 gap-2.5 pt-3 border-t border-gray-100 text-xs text-gray-600">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 pt-3 border-t border-gray-100 text-xs text-gray-600">
               <div className="flex items-center gap-2 p-2 bg-gray-50 rounded-lg">
                 <Truck size={18} className="text-emerald-500 shrink-0" />
                 <div>
