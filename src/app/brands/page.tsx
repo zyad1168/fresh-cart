@@ -4,6 +4,8 @@ import Link from "next/link";
 import { Brand } from "@/interfaces/products";
 import { FaTag } from "react-icons/fa";
 
+export const revalidate = 2592000;
+
 interface BrandsResponse {
   results: number;
   metadata: {
@@ -17,7 +19,7 @@ interface BrandsResponse {
 async function getBrands(): Promise<Brand[]> {
   try {
     const res = await fetch("https://ecommerce.routemisr.com/api/v1/brands", {
-      cache: "no-store",
+      next: { revalidate: 2592000 },
       signal: AbortSignal.timeout(8000),
     });
 
