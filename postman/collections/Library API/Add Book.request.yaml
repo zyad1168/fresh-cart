@@ -1,0 +1,8 @@
+$kind: http-request
+description: ""
+url: http://localhost:3000/books
+method: POST
+body:
+  type: json
+  content: '{ "id": 2, "title": " Code", "author": " Martin" }'
+order: 1000

@@ -1,0 +1,7 @@
+$kind: http-request
+url: http://localhost:3000/books/1/return
+method: POST
+body:
+  type: json
+  content: ""
+order: 4834
